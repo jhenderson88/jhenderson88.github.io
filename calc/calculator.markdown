@@ -54,11 +54,11 @@ State J: <input id="J" type="number">
     var J = document.getElementById("J").value;
     var qMom = 0;
     var E2 = 0;
-    if(Math.abs(ME)>0){
+    if(ME!=0){
       qMom = ME * Math.sqrt(((J * (2 * J -1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.pi()/5.))
       E2 = ME
     }
-    if(Math.abs(Q)>0){
+    if(Q!=0){
       E2 = Q / Math.sqrt(((J * (2 * J -1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.pi()/5.))
       qMoM = Q
     }
