@@ -28,8 +28,8 @@ B(EL;f &#8594; i):
     var finaJ = document.getElementById("FinaJ").value;
     var BELif = Math.pow(ME,2)/(2*initJ+1);
     var BELfi = Math.pow(ME,2)/(2*finaJ+1);
-    var BELifstring = BELif.toString();
-    var BELfistring = BELfi.toString();
+    var BELifstring = BELif.toFixed(5).toString();
+    var BELfistring = BELfi.toFixed(5).toString();
     document.getElementById("BELif").innerHTML=BELifstring;
     document.getElementById("BELfi").innerHTML=BELfistring;
     document.getElementById("Test").innerHTML=finaJ;
