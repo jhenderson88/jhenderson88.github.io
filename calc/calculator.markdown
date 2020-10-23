@@ -72,8 +72,8 @@ State J: <input id="J" type="number">
     var Qstring = Q.toFixed(5).toString();
     document.getElementById("E2").value=E2.toFixed(5);
     document.getElementById("Q").value=qMom.toFixed(5);
-    document.getElementById("blah1").innerHTML=E2string;
-    document.getElementById("blah2").innerHTML=Qstring;
+    document.getElementById("blah1").innerHTML="Test";
+    document.getElementById("blah2").innerHTML="Test";
   
   }
 </script>
