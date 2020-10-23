@@ -33,6 +33,12 @@ State J: <input id="J" type="number">
 
 <button type="button" onclick="CalcMEQMom()">
   Calculate</button>
+  
+1: 
+<p style="display:inline" id="blah1"></p>  
+
+2:  
+<p style="display:inline" id="blah2"></p>
 
 
 <script>
@@ -64,6 +70,8 @@ State J: <input id="J" type="number">
     }
     document.getElementById("E2").value=E2.toFixed(5);
     document.getElementById("Q").value=qMom.toFixed(5);
+    document.getElementById("blah1").innerHTML=E2.toFixed(5).toString();
+    document.getElementById("blah2").innerHTML=qMom.toFixed(5).toString();
   
   }
 </script>
