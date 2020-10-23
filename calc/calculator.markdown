@@ -63,7 +63,7 @@ State J: <input id="J" type="number">
     var J = document.getElementById("J").value;
     var qMom = 0;
     var E2 = 0;
-    var Jterm = ((2*J+1)*(2*J+3)*(J+1));
+    var Jterm = (2*J+3);
     document.getElementById("blah1").innerHTML=Jterm.toString();
     document.getElementById("blah2").innerHTML=ME.toString();
     document.getElementById("blah3").innerHTML=J.toString();
