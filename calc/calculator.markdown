@@ -61,15 +61,15 @@ State J: <input id="stateJ" type="number">
     document.getElementById("Test").innerHTML=finaJ;
   }
   function CalcMEQMom(){
-    var ME = document.getElementById("E2").value;
-    var Q = document.getElementById("Q").value;
-    var stateJ = document.getElementById("stateJ").value;
+    var ME = Number(document.getElementById("E2").value);
+    var Q = Number(document.getElementById("Q").value);
+    var stateJ = Number(document.getElementById("stateJ").value);
     //var qMom = 0;
     //var E2 = 0;
     var j1 = stateJ*(2*stateJ-1);
     var j2 = (2*stateJ + 1);
     var j3 = (2*stateJ + 3);
-    var j4 = Number(stateJ) + 1;
+    var j4 = stateJ + 1;
     document.getElementById("blah1").innerHTML=j1.toString();
     document.getElementById("blah2").innerHTML=j2.toString();
     document.getElementById("blah3").innerHTML=j3.toString();
