@@ -7,14 +7,9 @@ permalink: /calc/calculator
 
 Calculate B(EL) from matrix element
 
-Matrix element: 
-<input id="ME" type="number">
-
-Initial J:
-<input id="InitJ" type="number">
-
-Final J:
-<input id="FinaJ" type="number">
+Matrix element:  <input id="ME" type="number">
+Initial J: <input id="InitJ" type="number">
+Final J: <input id="FinaJ" type="number">
 
 
 <button type="button" onclick="CalcBEL()">
