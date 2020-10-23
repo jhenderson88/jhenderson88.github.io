@@ -2,24 +2,16 @@
 layout: base
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/blog/">Blog</a>
-    </nav>
-    <h1>{{ page.title }}</h1>
-    <section>
-      {{ content }}
-    </section>
-    <footer>
-      &copy; to me
-    </footer>
-  </body>
+{%- include top.html -%}
+
+<body class="wrap">
+  {%- include header.html -%}
+
+  {{- content -}}
+
+  {%- include footer.html -%}
+  {%- include anchor_links.html -%}
+  {%- include analytics.html -%}
+  {%- include search/script.html -%}
+</body>
 </html>
