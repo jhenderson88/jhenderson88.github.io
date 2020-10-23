@@ -62,8 +62,8 @@ State J: <input id="J" type="number">
       E2 = Q / Math.sqrt(((J * (2 * J -1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.pi()/5.))
       qMoM = Q
     }
-    document.getElementById("E2").value=E2.toFixed(5).toString();
-    document.getElementById("Q").value=qMom.toFixed(5).toString();
+    document.getElementById("E2").value=E2.toFixed(5);
+    document.getElementById("Q").value=qMom.toFixed(5);
   
   }
 </script>
