@@ -34,11 +34,11 @@ B(EL;f &#8594; i):
     var BELif = Math.pow(ME,2)/(2*initJ+1);
     var BELfi = Math.pow(ME,2)/(2*finaJ+1);
   
-    var BELif = BELif.toString();
-    var BELfi = BELfi.toString();
+    var BELifstring = BELif.toString();
+    var BELfistring = BELfi.toString();
   
-    document.getElementById("BELif").innerHTML=BELif
-    document.getElementById("BELfi").innerHTML=BELfi
+    document.getElementById("BELif").innerHTML=BELifstring
+    document.getElementById("BELfi").innerHTML=BELfistring
   
   }
 </script>
