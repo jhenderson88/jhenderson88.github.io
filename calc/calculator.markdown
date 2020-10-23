@@ -66,12 +66,14 @@ State J: <input id="stateJ" type="number">
     var stateJ = Number(document.getElementById("stateJ").value);
     var qMom = 0;
     var E2 = 0;
+    var Jterm = (stateJ*(2*stateJ - 1))/((2*stateJ+1)*(2*stateJ+3)*(stateJ+1));
+    var Jpi = Jterm * 16*Math.PI/5.
     if(Math.abs(ME) > 0){
-      qMom = 1;//ME * Math.sqrt(((J*(2*J-1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
+      qMom = ME * Math.sqrt(Jpi);
       E2 = ME;
     }
     if(Math.abs(Q) > 0){
-      E2 = 1; //Q / Math.sqrt(((J * (2 * J -1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
+      E2 = Q / Math.sqrt(Jpi);
       qMoM = Q;
     }
     var E2string = E2.toFixed(5).toString();
