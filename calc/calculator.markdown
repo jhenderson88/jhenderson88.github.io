@@ -21,6 +21,17 @@ B(EL;i &#8594; f):
 B(EL;f &#8594; i):  
 <p style="display:inline" id="BELfi"></p>
 
+
+E2 Matrix element &#8596; spectroscopic quadrupole moment:
+
+Quadrupole moment: <input id="Q" type="number">
+Matrix element: <input id="E2" type="number">
+State J: <input id="J" type="number">
+
+<button type="button" onclick="CalcMEQMom()">
+  Calculate</button>
+
+
 <script>
   function CalcBEL(){
     var ME = document.getElementById("ME").value;
@@ -33,5 +44,23 @@ B(EL;f &#8594; i):
     document.getElementById("BELif").innerHTML=BELifstring;
     document.getElementById("BELfi").innerHTML=BELfistring;
     document.getElementById("Test").innerHTML=finaJ;
+  }
+  function CalcMEQMom(){
+    var ME = document.getElementById("E2").value;
+    var Q = document.getElementById("Q").value;
+    var J = document.getElementById("J").value;
+  
+    var qMom = 0;
+    var E2 = 0;
+  
+    if(Math.abs(ME)>0){
+      qMom = ME * Math.sqrt(((J * (2 * J -1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.pi()/5.))
+    }
+    if(Math.abs(Q)>0){
+      E2 = Q / Math.sqrt(((J * (2 * J -1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.pi()/5.))
+    }
+    document.getElementById("E2").innerHTML=E2.toFixed(5).toString();
+    document.getElementById("BELfi").innerHTML=qMom.toFixed(5).toString();
+  
   }
 </script>
