@@ -49,9 +49,9 @@ State J: <input id="stateJ" type="number">
 
 <script>
   function CalcBEL(){
-    var ME = document.getElementById("ME").value;
-    var initJ = document.getElementById("InitJ").value;
-    var finaJ = document.getElementById("FinaJ").value;
+    var ME = Number(document.getElementById("ME").value);
+    var initJ = Number(document.getElementById("InitJ").value);
+    var finaJ = Number(document.getElementById("FinaJ").value);
     var BELif = Math.pow(ME,2)/(2*initJ+1);
     var BELfi = Math.pow(ME,2)/(2*finaJ+1);
     var BELifstring = BELif.toFixed(5).toString();
