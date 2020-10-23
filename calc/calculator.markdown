@@ -40,6 +40,9 @@ State J: <input id="J" type="number">
 2:  
 <p style="display:inline" id="blah2"></p>
 
+3:  
+<p style="display:inline" id="blah3"></p>
+
 
 <script>
   function CalcBEL(){
@@ -60,20 +63,24 @@ State J: <input id="J" type="number">
     var J = document.getElementById("J").value;
     var qMom = 0;
     var E2 = 0;
-    if(ME!=0){
-      qMom = ME * Math.sqrt(((J*(2*J-1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
-      E2 = ME;
-    }
-    if(Q!=0){
-      E2 = Q / Math.sqrt(((J * (2 * J -1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
-      qMoM = Q;
-    }
-    var E2string = E2.toFixed(5).toString();
-    var Qstring = Q.toFixed(5).toString();
-    document.getElementById("E2").value=E2.toFixed(5);
-    document.getElementById("Q").value=qMom.toFixed(5);
-    document.getElementById("blah1").innerHTML="Test";
-    document.getElementById("blah2").innerHTML="Test";
+    var Jterm = (J*(2*J-1))/((2*J+1)*(2*J+3)*(J+1));
+    document.getElementById("blah1").innerHTML=Jterm.toString();
+    document.getElementById("blah2").innerHTML=ME.toString();
+    document.getElementById("blah3").innerHTML=ME.toString();
+    //if(ME!=0){
+    //  qMom = ME * Math.sqrt(((J*(2*J-1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
+    //  E2 = ME;
+    //}
+    //if(Q!=0){
+    //  E2 = Q / Math.sqrt(((J * (2 * J -1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
+    //  qMoM = Q;
+    //}
+    //var E2string = E2.toFixed(5).toString();
+    //var Qstring = Q.toFixed(5).toString();
+    //document.getElementById("E2").value=E2.toFixed(5);
+    //document.getElementById("Q").value=qMom.toFixed(5);
+    //document.getElementById("blah1").innerHTML="Test";
+    //document.getElementById("blah2").innerHTML="Test";
   
   }
 </script>
