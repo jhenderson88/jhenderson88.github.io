@@ -29,7 +29,7 @@ B(EL;f &#8594; i):
 Quadrupole moment: <input id="Q" type="number">
 Matrix element: <input id="E2" type="number">
 
-State J: <input id="J" type="number">
+State J: <input id="stateJ" type="number">
 
 <button type="button" onclick="CalcMEQMom()">
   Calculate</button>
@@ -63,7 +63,7 @@ State J: <input id="J" type="number">
   function CalcMEQMom(){
     var ME = document.getElementById("E2").value;
     var Q = document.getElementById("Q").value;
-    var J = document.getElementById("J").value;
+    var J = document.getElementById("stateJ").value;
     //var qMom = 0;
     //var E2 = 0;
     var j1 = J*(2*J-1);
