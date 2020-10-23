@@ -5,7 +5,7 @@ title: "Calculator"
 permalink: /calc/calculator
 ---
 
-Calculate B(EL) from matrix element
+### Calculate B(EL) from matrix element
 
 Matrix element:  <input id="ME" type="number">
 Initial J: <input id="InitJ" type="number">
@@ -21,8 +21,10 @@ B(EL;i &#8594; f):
 B(EL;f &#8594; i):  
 <p style="display:inline" id="BELfi"></p>
 
+<BR>
+<BR>
 
-E2 Matrix element &#8596; spectroscopic quadrupole moment:
+### E2 Matrix element &#8596; spectroscopic quadrupole moment:
 
 Quadrupole moment: <input id="Q" type="number">
 Matrix element: <input id="E2" type="number">
