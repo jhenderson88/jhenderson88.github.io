@@ -10,7 +10,7 @@ permalink: /calc/calculator
 
 ### Calculate B(EL) from matrix element
 
-Matrix element:  <input id="ME" type="number">
+Matrix element: <input id="ME" type="number">
 Initial J: <input id="InitJ" type="number">
 Final J: <input id="FinaJ" type="number">
 
@@ -19,10 +19,10 @@ Final J: <input id="FinaJ" type="number">
   Calculate</button>
 
 B(EL;i &#8594; f): 
-<p style="display:inline" id="BELif"></p>  
+<input id="BELif" type="number"></p>  
 
 B(EL;f &#8594; i):  
-<p style="display:inline" id="BELfi"></p>
+<input id="BELfi" type="number"></p>
 
 <BR>
 <BR>
