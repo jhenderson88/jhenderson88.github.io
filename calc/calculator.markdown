@@ -5,9 +5,40 @@ title: "Calculator"
 permalink: /calc/calculator
 ---
 
-Words
+Calculate B(EL) from matrix element
 
-<label for="fname">First name:</label>
-<input type="text" id="fname" name="fname"><br><br>
-<label for="lname">Last name:</label>
-<input type="text" id="lname" name="lname"><br><br>
+Matrix element: 
+<input id="ME" type="number">
+
+Initial J:
+<input id="InitJ" type="number">
+
+Final J:
+<input id="FinaJ" type="number">
+
+
+<button type="button" onclick="CalcBEL()">
+  Calculate</button>
+
+B(EL;i &#8594; f): 
+<p style="display:inline" id="BELif"></p>
+
+B(EL;f &#8594; i): 
+<p style="display:inline" id="BELfi"></p>
+
+<script>
+  function CalcBEL(){
+    var ME = document.getElementById("ME");
+    var initJ = document.getElementById("InitJ");
+    var finaJ = document.getElementById("FinaJ");
+    var BELif = Math.pow(ME,2)/(2*initJ+1);
+    var BELfi = Math.pow(ME,2)/(2*finaJ+1);
+  
+    var BELif = BELif.toString();
+    var BELfi = BELfi.toString();
+  
+    document.getElementById("BELif").innerHTML=BELif
+    document.getElementById("BELfi").innerHTML=BELfi
+  
+  }
+</script>
