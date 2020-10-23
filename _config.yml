@@ -21,11 +21,11 @@
 title: Jack Henderson
 email: jack.henderson@surrey.ac.uk
 description: >- # this means to ignore newlines until "baseurl:"
-  Hello
+  UKRI FLF based at the University of Surrey and specialising in nuclear physics
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: jhenderson88
+github_username:  jhenderson88
 
 # Build settings
 theme: minima
