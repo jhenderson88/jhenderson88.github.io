@@ -6,7 +6,7 @@ permalink: /calc/calculator
 ---
 
 <button type="button" onclick="Clear()">
-  Clear</button>
+  Clear all</button>
 
 ### Calculate B(EL) from matrix element
 
