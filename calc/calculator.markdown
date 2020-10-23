@@ -43,6 +43,9 @@ State J: <input id="J" type="number">
 3:  
 <p style="display:inline" id="blah3"></p>
 
+4:  
+<p style="display:inline" id="blah4"></p>
+
 
 <script>
   function CalcBEL(){
@@ -63,12 +66,14 @@ State J: <input id="J" type="number">
     var J = document.getElementById("J").value;
     //var qMom = 0;
     //var E2 = 0;
-    var Jterm = (2*J + 3);
-    Jterm *= (2*J + 1);
-    Jterm *= (J + 1);
-    document.getElementById("blah1").innerHTML=Jterm.toString();
-    document.getElementById("blah2").innerHTML=ME.toString();
-    document.getElementById("blah3").innerHTML=J.toString();
+    var J1 = J*(2*J-1);
+    var J2 = (2*J + 3);
+    var J3 = (2*J + 1);
+    var J4 = (J + 1);
+    document.getElementById("blah1").innerHTML=J1.toString();
+    document.getElementById("blah2").innerHTML=J2.toString();
+    document.getElementById("blah3").innerHTML=J3.toString();
+    document.getElementById("blah4").innerHTML=J4.toString();
     //if(ME!=0){
     //  qMom = ME * Math.sqrt(((J*(2*J-1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
     //  E2 = ME;
