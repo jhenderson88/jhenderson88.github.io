@@ -64,15 +64,10 @@ State J: <input id="stateJ" type="number">
     }
     if(Math.abs(Q) > 0){
       E2 = Q / Math.sqrt(Jpi);
-      qMoM = Q;
+      qMoM = Number(Q);
     }
-    var E2string = E2.toFixed(5).toString();
-    var Qstring = Q.toFixed(5).toString();
     document.getElementById("E2").value=E2.toFixed(5);
-    document.getElementById("Q").value=qMom.toFixed(5);
-    document.getElementById("blah1").innerHTML=E2string;
-    document.getElementById("blah2").innerHTML=Qstring;
-  
+    document.getElementById("Q").value=qMom.toFixed(5);  
   }
   function Clear(){
     var x = document.querySelectorAll("input");
