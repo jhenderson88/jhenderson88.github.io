@@ -61,11 +61,11 @@ State J: <input id="J" type="number">
     var qMom = 0;
     var E2 = 0;
     if(ME!=0){
-      qMom = ME * Math.sqrt(((J * (2 * J -1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.pi()/5.));
+      qMom = ME * Math.sqrt(((J*(2*J-1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
       E2 = ME;
     }
     if(Q!=0){
-      E2 = Q / Math.sqrt(((J * (2 * J -1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.pi()/5.));
+      E2 = Q / Math.sqrt(((J * (2 * J -1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
       qMoM = Q;
     }
     var E2string = E2.toFixed(5).toString();
