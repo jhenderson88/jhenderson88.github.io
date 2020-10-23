@@ -7,6 +7,8 @@ permalink: /publications/papers
 
 [Google scholar](https://scholar.google.com/citations?hl=en&user=V_b9wcoAAAAJ)
 
+[ORCID](https://orcid.org/0000-0002-6010-9644)
+
 1. **J. Henderson** and S. R. Stroberg, *Examination of the inversion of isobaric-analogue states in nuclei*, Physical Review C **102** 031303R (2020) [doi](https://doi.org/10.1103/PhysRevC.102.031303)
 
 2. M. P. Taggart and **J. Henderson**, *Fast-neutron response of LaBr<sub>3</sub>(Ce) and LaCl<sub>3</sub>(Ce) scintillators*, Nuclear Instruments and Methods in Physics Research Section A **975** 164201 (2020) [doi](https://doi.org/10.1016/j.nima.2020.164201)
