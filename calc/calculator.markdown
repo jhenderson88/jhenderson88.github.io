@@ -66,7 +66,7 @@ State J: <input id="J" type="number">
     var Jterm = (J*(2*J-1))/((2*J+1)*(2*J+3)*(J+1));
     document.getElementById("blah1").innerHTML=Jterm.toString();
     document.getElementById("blah2").innerHTML=ME.toString();
-    document.getElementById("blah3").innerHTML=ME.toString();
+    document.getElementById("blah3").innerHTML=Q.toString();
     //if(ME!=0){
     //  qMom = ME * Math.sqrt(((J*(2*J-1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
     //  E2 = ME;
