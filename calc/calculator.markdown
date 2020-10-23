@@ -26,6 +26,7 @@ E2 Matrix element &#8596; spectroscopic quadrupole moment:
 
 Quadrupole moment: <input id="Q" type="number">
 Matrix element: <input id="E2" type="number">
+
 State J: <input id="J" type="number">
 
 <button type="button" onclick="CalcMEQMom()">
