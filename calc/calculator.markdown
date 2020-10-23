@@ -5,6 +5,9 @@ title: "Calculators"
 permalink: /calc/calculator
 ---
 
+<button type="button" onclick="Clear()">
+  Clear</button>
+
 ### Calculate B(EL) from matrix element
 
 Matrix element:  <input id="ME" type="number">
@@ -33,19 +36,6 @@ State J: <input id="stateJ" type="number">
 
 <button type="button" onclick="CalcMEQMom()">
   Calculate</button>
-  
-1: 
-<p style="display:inline" id="blah1"></p>  
-
-2:  
-<p style="display:inline" id="blah2"></p>
-
-3:  
-<p style="display:inline" id="blah3"></p>
-
-4:  
-<p style="display:inline" id="blah4"></p>
-
 
 <script>
   function CalcBEL(){
@@ -83,5 +73,12 @@ State J: <input id="stateJ" type="number">
     document.getElementById("blah1").innerHTML=E2string;
     document.getElementById("blah2").innerHTML=Qstring;
   
+  }
+  function Clear(){
+    var x = document.querySelectorAll("input");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      x[i].value = "";
+    }
   }
 </script>
