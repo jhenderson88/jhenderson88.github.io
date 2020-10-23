@@ -1,7 +1,7 @@
 ---
 # Calculator test
 layout: page
-title: "Calculator"
+title: "Calculators"
 permalink: /calc/calculator
 ---
 
