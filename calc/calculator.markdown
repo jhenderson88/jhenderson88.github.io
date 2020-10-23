@@ -34,6 +34,6 @@ Test: <p style="display:inline" id="Test"></p>
     var BELfistring = BELfi.toString();
     document.getElementById("BELif").innerHTML=BELifstring;
     document.getElementById("BELfi").innerHTML=BELfistring;
-    document.getElementById("Test").innerHTML=finaJ
+    document.getElementById("Test").innerHTML=finaJ;
   }
 </script>
