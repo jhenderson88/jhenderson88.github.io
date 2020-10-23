@@ -21,8 +21,6 @@ B(EL;i &#8594; f):
 B(EL;f &#8594; i): 
 <p style="display:inline" id="BELfi"></p>
 
-Test: <p style="display:inline" id="Test"></p>
-
 <script>
   function CalcBEL(){
     var ME = document.getElementById("ME").value;
