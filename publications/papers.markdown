@@ -1,6 +1,6 @@
 ---
 # Published works
-layout: page
+layout: default
 title: "Publications"
 permalink: /publications/papers
 ---
