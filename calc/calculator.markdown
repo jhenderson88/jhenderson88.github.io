@@ -64,30 +64,22 @@ State J: <input id="stateJ" type="number">
     var ME = Number(document.getElementById("E2").value);
     var Q = Number(document.getElementById("Q").value);
     var stateJ = Number(document.getElementById("stateJ").value);
-    //var qMom = 0;
-    //var E2 = 0;
-    var j1 = stateJ*(2*stateJ-1);
-    var j2 = (2*stateJ + 1);
-    var j3 = (2*stateJ + 3);
-    var j4 = stateJ + 1;
-    document.getElementById("blah1").innerHTML=j1.toString();
-    document.getElementById("blah2").innerHTML=j2.toString();
-    document.getElementById("blah3").innerHTML=j3.toString();
-    document.getElementById("blah4").innerHTML=j4.toString();
-    //if(ME!=0){
-    //  qMom = ME * Math.sqrt(((J*(2*J-1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
-    //  E2 = ME;
-    //}
-    //if(Q!=0){
-    //  E2 = Q / Math.sqrt(((J * (2 * J -1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
-    //  qMoM = Q;
-    //}
-    //var E2string = E2.toFixed(5).toString();
-    //var Qstring = Q.toFixed(5).toString();
-    //document.getElementById("E2").value=E2.toFixed(5);
-    //document.getElementById("Q").value=qMom.toFixed(5);
-    //document.getElementById("blah1").innerHTML="Test";
-    //document.getElementById("blah2").innerHTML="Test";
+    var qMom = 0;
+    var E2 = 0;
+    if(ME!=0){
+      qMom = ME * Math.sqrt(((J*(2*J-1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
+      E2 = ME;
+    }
+    if(Q!=0){
+      E2 = Q / Math.sqrt(((J * (2 * J -1))/((2*J+1)*(2*J+3)*(J+1))) * (16*Math.PI/5.));
+      qMoM = Q;
+    }
+    var E2string = E2.toFixed(5).toString();
+    var Qstring = Q.toFixed(5).toString();
+    document.getElementById("E2").value=E2.toFixed(5);
+    document.getElementById("Q").value=qMom.toFixed(5);
+    document.getElementById("blah1").innerHTML=E2string;
+    document.getElementById("blah2").innerHTML=Qstring;
   
   }
 </script>
