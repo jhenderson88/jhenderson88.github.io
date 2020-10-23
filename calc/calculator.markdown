@@ -14,7 +14,7 @@ Matrix element: <input id="ME" type="number">
 Initial J: <input id="InitJ" type="number">
 Final J: <input id="FinaJ" type="number">
 
-B(EL;i &#8594; f): <input id="BELif" type="number"></p>  B(EL;f &#8594; i): <input id="BELfi" type="number"></p>
+B(EL;i &#8594; f): <input id="BELif" type="number">  B(EL;f &#8594; i): <input id="BELfi" type="number">
 
 <button type="button" onclick="CalcBEL()">
   Calculate</button>
