@@ -15,7 +15,11 @@ Final J: <input id="FinaJ" type="number">
 <button type="button" onclick="CalcBEL()">
   Calculate</button>
 
-B(EL;i &#8594; f): <p style="display:inline" id="BELif"></p>  B(EL;f &#8594; i):  <p style="display:inline" id="BELfi"></p>
+B(EL;i &#8594; f): 
+<p style="display:inline" id="BELif"></p>  
+
+B(EL;f &#8594; i):  
+<p style="display:inline" id="BELfi"></p>
 
 <script>
   function CalcBEL(){
