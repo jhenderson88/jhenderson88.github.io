@@ -25,9 +25,9 @@ Test: <p style="display:inline" id="Test"></p>
 
 <script>
   function CalcBEL(){
-    var ME = document.getElementById("ME");
-    var initJ = document.getElementById("InitJ");
-    var finaJ = document.getElementById("FinaJ");
+    var ME = document.getElementById("ME").value;
+    var initJ = document.getElementById("InitJ").value;
+    var finaJ = document.getElementById("FinaJ").value;
     var BELif = Math.pow(ME,2)/(2*initJ+1);
     var BELfi = Math.pow(ME,2)/(2*finaJ+1);
     var BELifstring = BELif.toString();
