@@ -61,13 +61,13 @@ State J: <input id="stateJ" type="number">
     if(Math.abs(ME) > 0){
       qMom = ME * Math.sqrt(Jpi);
       E2 = ME;
+      document.getElementById("Q").value=qMom.toFixed(5);  
     }
     if(Math.abs(Q) > 0){
       E2 = Q / Math.sqrt(Jpi);
       qMoM = Number(Q);
+      document.getElementById("E2").value=E2.toFixed(5);
     }
-    document.getElementById("E2").value=E2.toFixed(5);
-    document.getElementById("Q").value=qMom.toFixed(5);  
   }
   function Clear(){
     var x = document.querySelectorAll("input");
