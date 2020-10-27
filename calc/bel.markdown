@@ -101,7 +101,7 @@ Reset</button>
 
 		var	wuE2	= 0.05940 * Math.pow(A,4./3.);	// e2fm4
 
-		document.getElementById("Error1").innerHTML	= wuE2.toString()
+		//document.getElementById("Error1").innerHTML	= wuE2.toString()
 
 		var	L_M1	= 0.444444444;
 		var	L_E2	= 0.013333333;
