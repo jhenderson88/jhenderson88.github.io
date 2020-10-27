@@ -10,7 +10,7 @@ Calculator for mixed E2/M1 transitions. Given:
 2. B(E2) and B(M1): calculates matrix elements, and lifetimes and mixing ratios
 3. Lifetimes and mixing ratios: calculates B(E2) and B(M1), and matrix elements
 
-The above order is the priority order. If given matrix elements, the calculator will do option 1. In order to calculate based on lifetimes, transition strengths and matrix elements must be set to zero.
+The above order is the priority order. For example, if given matrix elements, the calculator will always do option 1. If not given matrix elements but given B(E2) and B(M1), the calculator will do option 2. In order to calculate based on lifetimes, transition strengths and matrix elements must be set to zero.
 
 Mass (A): <input id="A" type="number" value=0>
 
