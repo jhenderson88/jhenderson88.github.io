@@ -33,6 +33,8 @@ Calculate</button>
 <button type="button" onclick="Clear()">
 Clear</button>
 
+<p id="Error"></p>
+
 <script>
 
 	function Calculate(){
@@ -79,6 +81,8 @@ Clear</button>
 			document.getElementById("Beta").value	= beta;
 			document.getElementById("velo").value	= velo * v_u;
 			document.getElementById("Energy").value	= energy;
+			if(beta>1)
+				document.getElementById("Error").innerHTML = "Error: in this household we do not go faster than the speed of light";
 		}
 		else{	// Calculate mass from velocity and energy
 			if(beta == 0)
@@ -93,6 +97,8 @@ Clear</button>
 			document.getElementById("Beta").value	= beta;
 			document.getElementById("velo").value	= velo * v_u;
 			document.getElementById("Mass").value	= mass;
+			if(beta>1)
+				document.getElementById("Error").innerHTML = "Error: in this household we do not go faster than the speed of light";
 		}
 
 	}
