@@ -108,6 +108,7 @@ Clear</button>
     		for (i = 0; i < x.length; i++) {
       			x[i].value = "";
     		}
+		document.getElementById("Error").innerHTML = "";
 	}
 
 </script>
