@@ -4,6 +4,14 @@ layout: page
 title: "B(EL) (mixed E2/M1) calculations"
 ---
 
+Calculator for mixed E2/M1 transitions. Given:
+
+1. Matrix elements: calculates B(E2) and B(M1), and lifetimes and mixing ratios
+2. B(E2) and B(M1): calculates matrix elements, and lifetimes and mixing ratios
+3. Lifetimes and mixing ratios: calculates B(E2) and B(M1), and matrix elements
+
+The above order is the priority order. If given matrix elements, the calculator will do option 1. In order to calculate based on lifetimes, transition strengths and matrix elements must be set to zero.
+
 Mass (A): <input id="A" type="number" value=0>
 
 Lifetime: <input id="tau" type="number" value=100>
@@ -42,6 +50,9 @@ M1 matrix element: <input id="ME_M1" type=number value=0> Units: <select name="M
 
 <button type="button" onclick="Calculate()">
 Calculate</button>
+
+<button type="button" onclick="Reset()">
+Reset</button>
 
 
 <p id="Error1" style="display:inline"></p>
@@ -228,4 +239,12 @@ Calculate</button>
 		}
 
 	}	
+	
+  	function Reset(){
+    		var x = document.querySelectorAll("input");
+    		var i;
+    		for (i = 0; i < x.length; i++) {
+      			x[i].value = 0;
+    		}
+  	}
 </script>
