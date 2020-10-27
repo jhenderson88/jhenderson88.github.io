@@ -1,7 +1,7 @@
 ---
 # Calculator test
 layout: page
-title: "B(EL) &#8596 ME and ME &#8596 Q<sub>s<\sub>"
+title: "B(EL) to ME and ME to Quadrupole moment"
 permalink: /calc/ME_Qspec
 ---
 
