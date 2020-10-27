@@ -11,3 +11,4 @@ permalink: /calc/calculators
 
 [&#946; energy calculator](/calc/velocity)
 
+[Safe Coulomb excitation limits](/calc/safecoulex)
