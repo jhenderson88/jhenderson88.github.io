@@ -1,8 +1,8 @@
 ---
 # Calculator test
 layout: page
-title: "Calculators"
-permalink: /calc/calculator
+title: "B(EL) &#8596 ME and ME &#8596 Q<sub>s<\sub>"
+permalink: /calc/ME_Qspec
 ---
 
 <button type="button" onclick="Clear()">

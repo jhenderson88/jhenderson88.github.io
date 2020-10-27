@@ -2,7 +2,7 @@
 # Published works
 layout: page
 title: "Publications"
-permalink: /publications/papers
+permalink: /research/publications
 ---
 
 [Google scholar](https://scholar.google.com/citations?hl=en&user=V_b9wcoAAAAJ)
