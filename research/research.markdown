@@ -7,6 +7,6 @@ permalink: /research/research
 
 [List of publications](/research/publications)
 
-[Convergence](/research/convergence)
+[How much data do we need to know the shape of a nucleus?](/research/convergence)
 
 [Make spheroids in Python](/figures/spheroid)
