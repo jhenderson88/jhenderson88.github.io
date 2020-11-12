@@ -10,3 +10,5 @@ permalink: /research/research
 [How much data do we need to know the shape of a nucleus?](/research/convergence)
 
 [Make spheroids in Python](/figures/spheroid)
+
+[Make &#946; - &#947; plots in Python](/figures/plot_beta_gamma.html)
