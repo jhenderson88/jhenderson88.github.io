@@ -12,6 +12,8 @@ Calculator for mixed E2/M1 transitions. Given:
 
 The above is the priority order. For example, if given matrix elements, the calculator will always do option 1. If not given matrix elements but given B(E2) and B(M1), the calculator will do option 2. In order to calculate based on lifetimes, transition strengths and matrix elements must be set to zero.
 
+If you select the mixing to be pure E2 or M1, &#948; and &#948;<sup>2</sup> values will be ignored.
+
 Mass (A): <input id="A" type="number" value=0>
 
 Lifetime: <input id="tau" type="number" value=100>
@@ -58,12 +60,6 @@ Calculate</button>
 <button type="button" onclick="Reset()">
 Reset</button>
 
-
-<p id="Error1" style="display:inline"></p>
-<p id="Error2" style="display:inline"></p>
-<p id="Error3" style="display:inline"></p>
-<p id="Error4" style="display:inline"></p> 
-
 <script>
 	function Calculate(){
 		var	A	= Number(document.getElementById("A").value);
@@ -106,8 +102,6 @@ Reset</button>
 		var	Energy	= Number(document.getElementById("energy").value);
 
 		var	wuE2	= 0.05940 * Math.pow(A,4./3.);	// e2fm4
-
-		//document.getElementById("Error1").innerHTML	= wuE2.toString()
 
 		var	L_M1	= 0.444444444;
 		var	L_E2	= 0.013333333;
