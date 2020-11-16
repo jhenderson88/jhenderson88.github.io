@@ -23,7 +23,11 @@ Half-life: <input id="thalf" type="number" value=0>   Time units: <select name="
 
 Transition energy (MeV): <input id="energy" type="number" value=1>
 
-Mixing ratio &#948;: <input id="delta" type="number" value=0> &#948;<sup>2</sup>: <input id="delta2" type="number" value=0>
+Mixing ratio &#948;: <input id="delta" type="number" value=0> &#948;<sup>2</sup>: <input id="delta2" type="number" value=0> Mixing: <select name="mixing" id="mixing">
+<option value="0">Pure E2</option>
+<option value="1">Pure M1</option>
+<option value="2">Mixed</option>
+</select>
 
 Branching ratio: <input id="BR" type="number" value=1>
 
@@ -70,6 +74,8 @@ Reset</button>
 		var	jInit	= Number(document.getElementById("jInit").value);
 		var	jFinal	= Number(document.getElementById("jFinal").value);
 		var	delta	= Number(document.getElementById("delta").value);
+		var	mixv	= Number(document.getElementById("mixing").value);
+		
 		var 	delta2	= 0;
 		if(delta>0){
 			var	delta2	= Math.pow(delta,2);
@@ -143,7 +149,7 @@ Reset</button>
 
 		}
 
-		if(BEL>0 && BML>0){
+		if(BEL>0 && BML>0 && mixv == 2){
 
 			if(BE2u == 1){ // e2b2
 				BEL	= BEL * 10000;
@@ -186,6 +192,66 @@ Reset</button>
 
 			}
 		}
+		else if(BEL > 0 && mixv == 0){ // Pure E2
+
+			if(BE2u == 1){ // e2b2
+				BEL	= BEL * 10000;
+			}
+			else if(BE2u == 2){ // Weisskopf units 
+				BEL	= BEL * wuE2;
+			}
+
+			var	lambdaE2	= E2_lam * BEL / 1000.;
+
+			lambda	= lambdaE2;
+
+			lambda	= lambda / BR;
+		
+			thalf	= 0.69314718056/lambda;
+			tau	= 1/lambda;
+		
+			thalf	= thalf / unit;
+			tau	= tau / unit;
+	
+			document.getElementById("tau").value	= tau.toFixed(6);
+			document.getElementById("thalf").value	= thalf.toFixed(6);
+
+			if(Math.abs(ME) == 0){
+				ME	= Math.sqrt(BEL*(2*jInit+1));
+
+				if(ME2u == 1)	// eb
+					ME	/= 100;		
+
+				document.getElementById("ME").value		= ME.toFixed(6);
+
+			}
+
+		}
+		else if(BML > 0 && mixv == 1){ // Pure M1
+
+			var	lambdaM1	= M1_lam * BML / 1000.;
+
+			lambda	= lambdaM1;
+
+			lambda	= lambda / BR;
+		
+			thalf	= 0.69314718056/lambda;
+			tau	= 1/lambda;
+		
+			thalf	= thalf / unit;
+			tau	= tau / unit;
+	
+			document.getElementById("tau").value	= tau.toFixed(6);
+			document.getElementById("thalf").value	= thalf.toFixed(6);
+
+			if(Math.abs(MEM1) == 0){
+				MEM1	= Math.sqrt(BML*(2*jInit+1));	
+
+				document.getElementById("ME_M1").value		= MEM1.toFixed(6);
+
+			}
+
+		}
 		else if(tau > 0 || thalf > 0){
 	
 			thalf	*= unit;
@@ -201,40 +267,81 @@ Reset</button>
 	
 			lambda	*= BR;
 
-			var	lambdaE2	= lambda/(1+1/delta2);
-			var	lambdaM1	= lambda/(1+delta2);
+			if(mixv == 2){ // Mixed
+				var	lambdaE2	= lambda/(1+1/delta2);
+				var	lambdaM1	= lambda/(1+delta2);
+			
+				BEL	= lambdaE2 * 1000. / E2_lam; 	
+				BML	= lambdaM1 * 1000. / M1_lam;
+				BELfi	= BEL*(2*jInit+1)/(2*jFinal+1);
+				BMLfi	= BML*(2*jInit+1)/(2*jFinal+1);	
+			
+				ME	= Math.sqrt(BEL*(2*jInit+1));
+				MEM1	= Math.sqrt(BML*(2*jInit+1));	
 		
-			BEL	= lambdaE2 * 1000. / E2_lam; 	
-			BML	= lambdaM1 * 1000. / M1_lam;
-			BELfi	= BEL*(2*jInit+1)/(2*jFinal+1);
-			BMLfi	= BML*(2*jInit+1)/(2*jFinal+1);	
+
+				if(BE2u == 0){ // e2fm4
+					document.getElementById("B(EL)if").value 	= BEL.toFixed(6);		
+					document.getElementById("B(EL)fi").value	= BELfi.toFixed(6);
+				}
+				else if(BE2u == 1){ // e2b2
+					document.getElementById("B(EL)if").value 	= (BEL/10000.).toFixed(6);		
+					document.getElementById("B(EL)fi").value	= (BELfi/10000).toFixed(6);
+				}
+				else{ // Weisskopf units
+					document.getElementById("B(EL)if").value 	= (BEL/wuE2).toFixed(6);		
+					document.getElementById("B(EL)fi").value	= (BEL/wuE2).toFixed(6);
+				}
+				document.getElementById("B(ML)if").value 	= BML.toFixed(6);		
+				document.getElementById("B(ML)fi").value	= BMLfi.toFixed(6);
+
+				if(ME2u == 1)
+					ME	/= 100;
+
+				document.getElementById("ME").value		= ME.toFixed(6);
+				document.getElementById("ME_M1").value		= MEM1.toFixed(6);
+
+				document.getElementById("delta2").value		= delta2;
+			}
+			else if(mixv == 0){ // Pure E2
+				var	lambdaE2	= lambda;
+			
+				BEL	= lambdaE2 * 1000. / E2_lam; 	
+				BELfi	= BEL*(2*jInit+1)/(2*jFinal+1);
+			
+				ME	= Math.sqrt(BEL*(2*jInit+1));
 		
-			ME	= Math.sqrt(BEL*(2*jInit+1));
-			MEM1	= Math.sqrt(BML*(2*jInit+1));	
-	
 
-			if(BE2u == 0){ // e2fm4
-				document.getElementById("B(EL)if").value 	= BEL.toFixed(6);		
-				document.getElementById("B(EL)fi").value	= BELfi.toFixed(6);
+				if(BE2u == 0){ // e2fm4
+					document.getElementById("B(EL)if").value 	= BEL.toFixed(6);		
+					document.getElementById("B(EL)fi").value	= BELfi.toFixed(6);
+				}
+				else if(BE2u == 1){ // e2b2
+					document.getElementById("B(EL)if").value 	= (BEL/10000.).toFixed(6);		
+					document.getElementById("B(EL)fi").value	= (BELfi/10000).toFixed(6);
+				}
+				else{ // Weisskopf units
+					document.getElementById("B(EL)if").value 	= (BEL/wuE2).toFixed(6);		
+					document.getElementById("B(EL)fi").value	= (BEL/wuE2).toFixed(6);
+				}
+
+				if(ME2u == 1)
+					ME	/= 100;
+
+				document.getElementById("ME").value		= ME.toFixed(6);
 			}
-			else if(BE2u == 1){ // e2b2
-				document.getElementById("B(EL)if").value 	= (BEL/10000.).toFixed(6);		
-				document.getElementById("B(EL)fi").value	= (BELfi/10000).toFixed(6);
+			else if(mixv == 1){ // Pure M1
+				var	lambdaM1	= lambda;
+			
+				BML	= lambdaM1 * 1000. / M1_lam;
+				BMLfi	= BML*(2*jInit+1)/(2*jFinal+1);	
+			
+				MEM1	= Math.sqrt(BML*(2*jInit+1));	
+
+				document.getElementById("B(ML)if").value 	= BML.toFixed(6);		
+				document.getElementById("B(ML)fi").value	= BMLfi.toFixed(6);
+				document.getElementById("ME_M1").value		= MEM1.toFixed(6);
 			}
-			else{ // Weisskopf units
-				document.getElementById("B(EL)if").value 	= (BEL/wuE2).toFixed(6);		
-				document.getElementById("B(EL)fi").value	= (BEL/wuE2).toFixed(6);
-			}
-			document.getElementById("B(ML)if").value 	= BML.toFixed(6);		
-			document.getElementById("B(ML)fi").value	= BMLfi.toFixed(6);
-
-			if(ME2u == 1)
-				ME	/= 100;
-
-			document.getElementById("ME").value		= ME.toFixed(6);
-			document.getElementById("ME_M1").value		= MEM1.toFixed(6);
-
-			document.getElementById("delta2").value		= delta2;
 
 		}
 
@@ -246,5 +353,11 @@ Reset</button>
     		for (i = 0; i < x.length; i++) {
       			x[i].value = 0;
     		}
+		document.getElementById("A").value	= 100;
+		document.getElementById("energy").value	= 1;
+		document.getElementById("jInit").value	= 2;
+		document.getElementById("jFinal").value	= 0;
+		document.getElementById("BR").value	= 1;
+		document.getElementById("mixing").value	= 0;
   	}
 </script>
