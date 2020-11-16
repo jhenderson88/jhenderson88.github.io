@@ -82,7 +82,7 @@ Reset</button>
 		var	BEL	= Number(document.getElementById("B(EL)if").value);
 		if(BEL == 0){
 			BEL	= Number(document.getElementById("B(EL)fi").value);
-			BEL	*=	(2*jInit+1)/(2*jFinal+1);
+			BEL	*=	(2*jFinal+1)/(2*jInit+1);
 		}
 		var	BML	= Number(document.getElementById("B(ML)if").value);
 		if(BML == 0){
@@ -174,6 +174,12 @@ Reset</button>
 			document.getElementById("delta").value	= delta.toFixed(6);
 			document.getElementById("delta2").value	= delta2.toFixed(6);
 
+			document.getElementById("B(EL)if").value = BEL;
+			document.getElementById("B(EL)fi").value = BEL * (2*jInit+1)/(2*jFinal+1);
+
+			document.getElementById("B(ML)if").value = BML;
+			document.getElementById("B(ML)fi").value = BML * (2*jInit+1)/(2*jFinal+1);
+
 			if(Math.abs(ME) == 0 || Math.abs(MEM1) == 0){
 				ME	= Math.sqrt(BEL*(2*jInit+1));
 				MEM1	= Math.sqrt(BML*(2*jInit+1));	
@@ -210,6 +216,9 @@ Reset</button>
 			document.getElementById("tau").value	= tau.toFixed(6);
 			document.getElementById("thalf").value	= thalf.toFixed(6);
 
+			document.getElementById("B(EL)if").value = BEL;
+			document.getElementById("B(EL)fi").value = BEL * (2*jInit+1)/(2*jFinal+1);
+
 			if(Math.abs(ME) == 0){
 				ME	= Math.sqrt(BEL*(2*jInit+1));
 
@@ -237,6 +246,9 @@ Reset</button>
 	
 			document.getElementById("tau").value	= tau.toFixed(6);
 			document.getElementById("thalf").value	= thalf.toFixed(6);
+
+			document.getElementById("B(ML)if").value = BML;
+			document.getElementById("B(ML)fi").value = BML * (2*jInit+1)/(2*jFinal+1);
 
 			if(Math.abs(MEM1) == 0){
 				MEM1	= Math.sqrt(BML*(2*jInit+1));	
