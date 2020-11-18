@@ -5,7 +5,7 @@ title: "Publications"
 permalink: /research/publications
 ---
 
-[Google scholar](https://scholar.google.com/citations?hl=en&user=V_b9wcoAAAAJ)
+[Google scholar](https://scholar.google.com/citations?hl=en&user=V_b9wcoAAAAJ&view_op=list_works&sortby=pubdate)
 
 [ORCID](https://orcid.org/0000-0002-6010-9644)
 
