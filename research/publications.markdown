@@ -9,7 +9,7 @@ permalink: /research/publications
 
 [ORCID](https://orcid.org/0000-0002-6010-9644)
 
-1. S. A. Gillespie, **J. Henderson**, K. Abrahams, F. A. Ali, L. Atar, G. C. Ball, N. Bernier, S. S. Bhattcharjee, R. Caballero-Folch, M. Bowry, A. Chester, R. Coleman, T. Drake, E. Dunling, A. B. Garnsworthy, B. Greaves, G. F. Grinyer, G. Hackman, E. Kasanda, R. LaFleur, S. Masango, D. Muecher, C. Ngwetsheni, S. S. Ntshangase, B. Olaizola, J. N. Orce, T. Rockman, Y. Saito, L. Sexton, P. Šiurytė, J. Smallcombe, J. K. Smith, C. E. Svensson, E. Timakova, R. Wadsworth, J. Williams, C. Y. Wu, T. Zidar, *Coulomb excitation of <sup>80,82<\sup>Kr and a change in structure approaching N=Z=40*, Physical Review C **104** 044313 (2021)
+1. S. A. Gillespie, **J. Henderson**, K. Abrahams, F. A. Ali, L. Atar, G. C. Ball, N. Bernier, S. S. Bhattcharjee, R. Caballero-Folch, M. Bowry, A. Chester, R. Coleman, T. Drake, E. Dunling, A. B. Garnsworthy, B. Greaves, G. F. Grinyer, G. Hackman, E. Kasanda, R. LaFleur, S. Masango, D. Muecher, C. Ngwetsheni, S. S. Ntshangase, B. Olaizola, J. N. Orce, T. Rockman, Y. Saito, L. Sexton, P. Šiurytė, J. Smallcombe, J. K. Smith, C. E. Svensson, E. Timakova, R. Wadsworth, J. Williams, C. Y. Wu, T. Zidar, *Coulomb excitation of <sup>80,82</sup>Kr and a change in structure approaching N=Z=40*, Physical Review C **104** 044313 (2021)
 
 2. M. P. Taggart, **J. Henderson**, J. O'Neill, R. Hawrami, E. Ariesanti, A. Burger, P. J. Sellin, *Fast-neutron response of the novel scintillator caesium haffnium chloride*, Nuclear Instruments and Methods in Physics Research Section A, **1012** 165224 (2021) [doi](https://doi.org/10.1016/j.nima.2021.165224)
 
