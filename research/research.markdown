@@ -12,3 +12,5 @@ permalink: /research/research
 [Make spheroids in Python](/figures/spheroid)
 
 [Make &#946; - &#947; plots in Python](/figures/plot_beta_gamma.html)
+
+[Minimizers for Coulomb excitation](/research/coulex)
