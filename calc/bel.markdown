@@ -142,8 +142,14 @@ Reset</button>
 				document.getElementById("B(EL)if").value 	= (BEL/wuE2).toFixed(6);		
 				document.getElementById("B(EL)fi").value	= (BEL/wuE2).toFixed(6);
 			}
-			document.getElementById("B(ML)if").value 	= BML.toFixed(6);		
-			document.getElementById("B(ML)fi").value	= BMLfi.toFixed(6);
+			if(BM1u == 0){
+				document.getElementById("B(ML)if").value 	= BML.toFixed(6);		
+				document.getElementById("B(ML)fi").value	= BMLfi.toFixed(6);
+			}
+			else{
+				document.getElementById("B(ML)if").value 	= (BML/wuM1).toFixed(6);		
+				document.getElementById("B(ML)fi").value	= (BMLfi/wuM1).toFixed(6);
+			}
 
 		}
 
