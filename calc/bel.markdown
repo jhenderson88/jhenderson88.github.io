@@ -14,6 +14,8 @@ The above is the priority order. For example, if given matrix elements, the calc
 
 If you select the mixing to be pure E2 or M1, &#948; and &#948;<sup>2</sup> values will be ignored.
 
+Updated on 28/06/2023 to add Weisskopf units for B(M1).
+
 Mass (A): <input id="A" type="number" value=0>
 
 Lifetime: <input id="tau" type="number" value=100>
