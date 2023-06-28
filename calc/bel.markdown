@@ -48,6 +48,7 @@ E2 matrix element: <input id="ME" type=number value=0> Units: <select name="E2ME
 
 B(M1)&#8595;: <input id="B(ML)if" type=number value=0> B(M1)&#8593;: <input id="B(ML)fi" type=number value=0> Units: <select name="BMLunits" id="BMLunits">
 <option value="0">&mu;^2_N</option>
+<option value="1">W.u.</option>
 </select>
 
 M1 matrix element: <input id="ME_M1" type=number value=0> Units: <select name="M1MEunits" id="M1MEunits">
@@ -102,6 +103,7 @@ Reset</button>
 		var	Energy	= Number(document.getElementById("energy").value);
 
 		var	wuE2	= 0.05940 * Math.pow(A,4./3.);	// e2fm4
+		var	wuM1	= 1.7905; // mu_N^2
 
 		var	L_M1	= 0.444444444;
 		var	L_E2	= 0.013333333;
@@ -150,6 +152,10 @@ Reset</button>
 			}
 			else if(BE2u == 2){ // Weisskopf units 
 				BEL	= BEL * wuE2;
+			}
+
+			if(BM1u == 1){ // Weisskopft units
+				BML	= BML * wuM1;
 			}
 
 			var	lambdaE2	= E2_lam * BEL / 1000.;
@@ -232,6 +238,10 @@ Reset</button>
 		}
 		else if(BML > 0 && mixv == 1){ // Pure M1
 
+			if(BM1u == 1){
+				BML 	= BML * wuM1;
+			}
+
 			var	lambdaM1	= M1_lam * BML / 1000.;
 
 			lambda	= lambdaM1;
@@ -298,8 +308,14 @@ Reset</button>
 					document.getElementById("B(EL)if").value 	= (BEL/wuE2).toFixed(6);		
 					document.getElementById("B(EL)fi").value	= (BEL/wuE2).toFixed(6);
 				}
-				document.getElementById("B(ML)if").value 	= BML.toFixed(6);		
-				document.getElementById("B(ML)fi").value	= BMLfi.toFixed(6);
+				if(BM1u == 0){
+					document.getElementById("B(ML)if").value 	= BML.toFixed(6);		
+					document.getElementById("B(ML)fi").value	= BMLfi.toFixed(6);
+				}
+				else{
+					document.getElementById("B(ML)if").value 	= (BML/wuM1).toFixed(6);		
+					document.getElementById("B(ML)fi").value	= (BMLfi/wuM1).toFixed(6);
+				}
 
 				if(ME2u == 1)
 					ME	/= 100;
@@ -344,8 +360,15 @@ Reset</button>
 			
 				MEM1	= Math.sqrt(BML*(2*jInit+1));	
 
-				document.getElementById("B(ML)if").value 	= BML.toFixed(6);		
-				document.getElementById("B(ML)fi").value	= BMLfi.toFixed(6);
+				
+				if(BM1u == 0){
+					document.getElementById("B(ML)if").value 	= BML.toFixed(6);		
+					document.getElementById("B(ML)fi").value	= BMLfi.toFixed(6);
+				}
+				else{
+					document.getElementById("B(ML)if").value 	= (BML/wuM1).toFixed(6);		
+					document.getElementById("B(ML)fi").value	= (BMLfi/wuM1).toFixed(6);
+				}
 				document.getElementById("ME_M1").value		= MEM1.toFixed(6);
 			}
 
