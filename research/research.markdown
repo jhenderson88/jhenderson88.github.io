@@ -13,4 +13,4 @@ permalink: /research/research
 
 [Make &#946; - &#947; plots in Python](/figures/plot_beta_gamma.html)
 
-[Minimizers for Coulomb excitation](https://github.com/jhenderson88)
+[Minimizers for Coulomb excitation](https://github.com/jhenderson88/GOSIAFitter)
