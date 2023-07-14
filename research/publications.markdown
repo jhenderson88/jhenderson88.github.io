@@ -9,7 +9,7 @@ permalink: /research/publications
 
 [ORCID](https://orcid.org/0000-0002-6010-9644)
 
-1. S. Kisyov, C. Y. Wu, **J. Henderson**, A. Gade, K. Kaneko, Y. Sun, N. Shimizu, T. Mizusaki, D. Rhodes, S. Biswas, A. Chester, M. Devlin, P. Farris, A. M. Hill, J. Li, E. Rubino, D. Weisshaar, *Structure of <sup>126,128<\sup>Xe studied in Coulomb excitation measurements*, Physical Review C **106** 034311 (2022) [doi](https://doi.org/10.1103/PhysRevC.106.034311)
+1. S. Kisyov, C. Y. Wu, **J. Henderson**, A. Gade, K. Kaneko, Y. Sun, N. Shimizu, T. Mizusaki, D. Rhodes, S. Biswas, A. Chester, M. Devlin, P. Farris, A. M. Hill, J. Li, E. Rubino, D. Weisshaar, *Structure of <sup>126,128</sup>Xe studied in Coulomb excitation measurements*, Physical Review C **106** 034311 (2022) [doi](https://doi.org/10.1103/PhysRevC.106.034311)
 
 2. G. Lotay, **J. Henderson**, W. N. Catford, F. A. Ali, J. Berean, N. Bernier, S. S. Bhattacharjee, M. Bowry, R. Caballero-Folch, B. Davids, T. E. Drake, A. B. Garnsworthy, F. Ghazi Moradi, S. A. Gillespie, B. Greaves, G. Hackman, S. Hallam, D. Hymers, E. Kasanda, D. Levy, B. K. Luna, A. Mathews, Z. Meisel, M. Moukaddam, D. Muecher, B. Olaizola, N. A. Orr, H. P. Patel, M. M. Rajabali, Y. Saito, J. Smallcombe, M. Spencer, C. E. Svensson, K. Whitmore, M. Williams, *Single neutron transfer on 23Ne and its relevance for the pathway of nucleosynthesis in astrophysical X-ray bursts*, Physics Letters B **833** 137361 (2022) [doi](https://doi.org/10.1016/j.physletb.2022.137361)
 
